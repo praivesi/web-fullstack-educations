@@ -15,16 +15,11 @@
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
+
 <body>
-
-    <h3 id="hi">HI</h3>
-    <script>
-        $('#hi').click(function(){
-            $('#hi').animate({marginLeft : '100px'}, 1000);
-        })
-    </script>
-
-
+    <div class="left-menu">
+        <p>Menu Title</p>
+    </div>
 
 
 
@@ -62,28 +57,98 @@
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a id='login' class="btn btn-primary btn-lg" href="#" role="button">Log In</a>
+        <a id='show-menu' class="btn btn-danger btn-lg" href="#" role="button">Show Menu</a>
     </div>
 
-    <input id="test-input">
+    <h4 class="my-4 text-center"></h4>
+
+    <div style="overflow: hidden; position: relative">
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="asset/nature-1.png">
+            </div>
+            <div class="slide-box">
+                <img src="asset/nature-2.jpg">
+            </div>
+            <div class="slide-box">
+                <img src="asset/nature-3.jpg">
+            </div>
+        </div>
+        <button class="slide-next">Next</button>
+    </div>
+
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
 
     <script>
-        $('form').on('submit', function(e){
-            if($('#email').val() == ""){
-                e.preventDefault(); 
-                $('#email-alert').show();
+
+        var pictureNum = 1;
+
+
+        $('.slide-next').click(function () {
+            if (pictureNum == 1) {
+                $('.slide-container').css('transform', 'translateX(-100vw)');
+                pictureNum = 2;
+            } else if (pictureNum == 2) {
+                $('.slide-container').css('transform', 'translateX(-200vw)');
+                pictureNum = 3;
+            } else {
+                $('.slide-container').css('transform', 'translateX(0vw)');
+                pictureNum = 1;
             }
         })
 
-        $('#email').on('change', function(){
 
+
+
+
+        $('.slide-1').click(function () {
+            $('.slide-container').css('transform', 'translateX(0vw)');
+        });
+
+        $('.slide-2').click(function () {
+            $('.slide-container').css('transform', 'translateX(-100vw)');
+        });
+
+        $('.slide-3').click(function () {
+            $('.slide-container').css('transform', 'translateX(-200vw)');
+        })
+    </script>
+
+
+
+
+
+    <script>
+        $('#show-menu').click(function () {
+            $('.left-menu').animate({ marginLeft: '0px' });
+        })
+    </script>
+
+    <script>
+        $('form').on('submit', function (e) {
+            var inputEmail = $('#email').val();
+            if (/\S+@\S+\.\S+/.test(inputEmail) == false) {
+                e.preventDefault();
+            }
+
+
+            // if($('#email').val() == ""){
+            //     e.preventDefault(); 
+            //     $('#email-alert').show();
+            // }
         })
 
         $('#login').on('click', function () {
-            $('.black-background').fadeIn();
+            // $('.black-background').fadeIn();
+            // $('.black-background').show().animate({marginTop: '0px'});
+            $('.black-background').addClass('slide-down');
         });
 
         $('#close-btn').on('click', function () {
-            $('.black-background').fadeOut();
+            // $('.black-background').fadeOut();
+            $('.black-background').removeClass('slide-down');
         });
 
         $('#nav-sub-button').click(function () {
