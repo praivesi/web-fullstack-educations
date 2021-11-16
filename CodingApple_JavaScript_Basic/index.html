@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="./css/main.css" rel="stylesheet">
+    <title>Hello, world!</title>
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+
+    <h3 id="hi">HI</h3>
+    <script>
+        $('#hi').click(function(){
+            $('#hi').animate({marginLeft : '100px'}, 1000);
+        })
+    </script>
+
+
+
+
+
+
+
+    <div class="black-background">
+        <div class='white-background'>
+            <form action="login.php">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" id="email">
+                    <p id="email-alert">이메일이 빈칸입니다.</p>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">전송</button>
+            </form>
+            <a id='close-btn' class="btn btn-secondary btn-lg" href="#" role="button">Close</a>
+        </div>
+    </div>
+    <div class="nav-menu">
+        <h4 style="margin: 0">Shirts Studio</h4>
+        <a id="nav-sub-button">Products</a>
+    </div>
+    <ul class="list-group nav-sub">
+        <li class="list-group-item">Outer</li>
+        <li class="list-group-item">Innerwear</li>
+        <li class="list-group-item">Shirts</li>
+    </ul>
+
+    <div class="jumbotron main-background">
+        <h1 class="display-4">Shirts Studio</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+            featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a id='login' class="btn btn-primary btn-lg" href="#" role="button">Log In</a>
+    </div>
+
+    <input id="test-input">
+
+    <script>
+        $('form').on('submit', function(e){
+            if($('#email').val() == ""){
+                e.preventDefault(); 
+                $('#email-alert').show();
+            }
+        })
+
+        $('#email').on('change', function(){
+
+        })
+
+        $('#login').on('click', function () {
+            $('.black-background').fadeIn();
+        });
+
+        $('#close-btn').on('click', function () {
+            $('.black-background').fadeOut();
+        });
+
+        $('#nav-sub-button').click(function () {
+            $('.nav-sub').slideToggle();
+        });
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
