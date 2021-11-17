@@ -29,10 +29,20 @@
     justify-content: space-between;
     padding: 15px;
     align-items: center;
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
 }
 
 .nav-sub{
     display: none;
+}
+
+.nav-black {
+    background: white;
+    color: black;
 }
 
 #email-alert {
@@ -71,4 +81,13 @@
     position: absolute;
     top: 45%;
     right: 0;
+}
+
+.large-logo {
+    font-size: 30px;
+    transition: all 1s;
+}
+
+.small-logo {
+    font-size: 15px;
 }
