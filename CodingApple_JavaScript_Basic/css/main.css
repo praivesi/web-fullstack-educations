@@ -65,7 +65,11 @@
 .slide-container{
     width: 300vw;
     /* transform: translateX(-100vw); */
-    transition: transform 1s;
+    /* transition: transform 1s; */
+}
+
+.transforming {
+    transition: transform 0.5s;
 }
 
 .slide-box {
