@@ -1,0 +1,167 @@
+.profile { 
+    width : 200px;
+    display : block;
+    margin : auto;
+  }
+
+  .box {
+    margin-top : 20px;
+    padding-left : 30px; 
+  }
+
+  .container {
+      width: 100;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .header {
+    width: 100%;
+    height: 50px;
+    background-color: aquamarine;
+  }
+
+  .left-menu {
+      width: 20%;
+      height: 400px;
+      background: cornflowerblue;
+      display: inline-block;
+      /* float: left; */
+  }
+
+  .right {
+      width: 80%;
+      height: 400px;
+      background: coral;
+      display: inline-block;
+      /* float: left; */
+  }
+
+  .footer {
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+    /* clear: both; */
+  }
+
+  .my-left{
+    width: 80%;
+    height: 200px;
+    float: left;
+    background-color: cornsilk;
+  }
+
+  .my-left img{
+    margin: 10px;
+    width: 5%;
+    float: left;
+  }
+
+  .my-name {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .my-content {
+    clear: both;
+  }
+
+  .my-right{
+    width: 20%;
+    height: 200px;
+    float: left;
+  }
+
+  .my-right img{
+    width: 100%;
+  }
+
+  .navbar li {
+    display: inline-block;
+    width: 60px;
+  }
+
+  .navbar li a {
+    font-size: 16px;
+    text-decoration: none ;
+  }
+
+  .main-background {
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/shoes.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 1px;
+  }
+
+  .main-title {
+    color: white;
+    font-size: 40px;
+    margin-top: 200px;
+  }
+
+  .main-content {
+    color: white;
+  }
+
+  .main-button {
+    padding: 15px;
+    font-size: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    top: 0px;
+    left: 500px;
+  }
+
+  .test {
+    width: 50%;
+    height: 300px;
+    position: relative;
+    background-color: blueviolet;
+    top: -350px;
+    margin: auto;
+    opacity: 0.6;
+  }
+
+  td, th {
+    /* border: 1px solid black; */
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  .cart-background {
+    width : 100%;
+    background-color: #c2d3de;
+    padding: 30px;
+  }
+
+  .cart-table {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+  }
+
+  .cart-table td, .cart-table th {
+    padding: 15px;
+    border-bottom: 1px solid #c2d3de;
+  }
+
+  .btn:hover {
+    background-color: chocolate;
+  }
+
+  .btn:focus {
+    background-color: red;
+  }
+  
+  .btn:active {
+    background-color: brown;
+  }
